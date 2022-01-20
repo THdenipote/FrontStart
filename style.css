@@ -133,22 +133,102 @@ nav ul a svg{
     text-align: center;
     margin: 80px 0;
     padding: 0 100px;
+    
 }
 
 .services-container{
     display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto 0;
 }
 
 .services .services-container .service-card{
+    max-width: 360px;
     background: coral;
     border: 1px solid greenyellow;
     border-radius: 20px;
     padding: 0px 25px 25px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
 }
 
 .services .services-container .service-card img{
     margin: 25px 0;
+    width: 50px;
 }
+.service-card:nth-child(2){         /* usei nth-child ao inves do seletor irmão */
+    margin: 0 10px;
+}
+
+.animado{
+    text-align: center;
+    margin: 80px 0;
+    
+    
+    /* text-align: center */;
+}
+
+.container2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;    
+    max-width: 1000px;
+    flex-direction: row;
+    z-index: 1;
+    margin: 50px auto;
+    
+}
+
+.container2 .card2{
+    position: relative;
+    width: 280;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    /* border-radius: 30px; */
+    background-color: skyblue;
+    /* overflow: hidden; */    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid red;
+    border-left: 1px solid red;
+    transform-style: preserve-3d;
+    
+}
+
+.container2 .card2 .content2{    
+    padding: 20px;
+    text-align: center;
+    transform: translateZ(20px) scaleY(0);
+    opacity: 0;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    
+    
+    
+    
+}
+
+.container2 .card2:hover .content2{
+    transform-style: preserve-3d;
+    transform: translateZ(120px) scaleY(1);
+    opacity: 1; 
+    
+    
+}
+
+
+/* .oii{
+    height: 900px;
+} */
 
 /* RESPONSIVIDADE */
 
@@ -179,6 +259,24 @@ nav ul a svg{
 
     .sobre-mim .img-container{
         margin: 70px 0;
+    }
+
+    .services{
+        margin: 0;
+    }
+
+    .services .services-container{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card{
+        height: 360px;
+    }
+
+    .service-card:nth-child(2){         /* usei nth-child ao inves do seletor irmão */
+        margin: 20px 0;
     }
 
 }
@@ -238,6 +336,10 @@ nav ul a svg{
     }
 
     .sobre-mim{
+        padding: 40px;
+    }
+
+    .services{
         padding: 40px;
     }
 
